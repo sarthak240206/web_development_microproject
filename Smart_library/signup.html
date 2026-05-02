@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Signup | BookVerse</title>
+
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+
+<style>
+body.auth-body{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+overflow:hidden;
+position:relative;
+font-family:Segoe UI,Arial,sans-serif;
+}
+
+/* glowing background */
+body.auth-body::before,
+body.auth-body::after{
+content:"";
+position:absolute;
+border-radius:50%;
+filter:blur(65px);
+opacity:.38;
+z-index:0;
+animation:pulse 6s ease-in-out infinite;
+}
+
+body.auth-body::before{
+width:280px;
+height:280px;
+background:#60a5fa;
+top:8%;
+left:8%;
+}
+
+body.auth-body::after{
+width:340px;
+height:340px;
+background:#c084fc;
+bottom:10%;
+right:8%;
+animation-delay:2s;
+}
+
+/* center layout */
+.auth-layout{
+position:relative;
+z-index:2;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+padding:20px;
+}
+
+/* hide left side card */
+.auth-side{
+display:none;
+}
+
+/* remove right card box */
+.auth-card{
+width:100%;
+max-width:450px;
+padding:10px;
+background:transparent;
+border:none;
+box-shadow:none;
+color:#fff;
+}
+
+.auth-card h1{
+font-size:42px;
+text-align:center;
+margin-bottom:8px;
+}
+
+.auth-card p{
+text-align:center;
+color:#dbeafe;
+margin-bottom:22px;
+}
+
+.auth-form{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.auth-form label{
+font-size:14px;
+font-weight:600;
+}
+
+.auth-form input{
+padding:14px;
+border:none;
+outline:none;
+border-radius:12px;
+background:rgba(255,255,255,.95);
+font-size:15px;
+}
+
+.auth-form input:focus{
+box-shadow:0 0 0 3px rgba(255,255,255,.15);
+}
+
+.btn{
+padding:14px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:700;
+font-size:16px;
+margin-top:8px;
+background:linear-gradient(90deg,#60a5fa,#c084fc);
+color:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.20);
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.error{
+text-align:center;
+color:#ffd6d6;
+margin-top:6px;
+}
+
+.auth-card > p:last-child{
+margin-top:18px;
+text-align:center;
+font-size:15px;
+}
+
+.auth-card > p:last-child a{
+color:#fff;
+font-weight:700;
+text-decoration:none;
+}
+
+.auth-card > p:last-child a:hover{
+text-decoration:underline;
+}
+
+@keyframes pulse{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
+@media(max-width:520px){
+.auth-card{
+max-width:100%;
+padding:6px;
+}
+
+.auth-card h1{
+font-size:34px;
+}
+}
+</style>
+
+</head>
+
+<body class="auth-body">
+
+<main class="auth-layout">
+
+<section class="auth-side">
+</section>
+
+<section class="auth-card">
+
+<h1>Sign Up</h1>
+<p>Create your account in a minute</p>
+
+<form id="signupForm" class="auth-form" method="POST" action="signup_process.php">
+
+<label for="name">Full Name</label>
+<input id="name" name="full_name" type="text" placeholder="Your full name" required />
+
+<label for="semail">Email</label>
+<input id="semail" name="email" type="email" placeholder="you@example.com" required />
+
+<label for="spassword">Password</label>
+<input id="spassword" name="password" type="password" placeholder="Minimum 6 characters" required />
+
+<label for="confirm">Confirm Password</label>
+<input id="confirm" name="confirm_password" type="password" placeholder="Repeat password" required />
+
+<button class="btn btn-primary" type="submit">Create Account</button>
+
+<p id="signupError" class="error"></p>
+
+</form>
+
+<p>Already registered? <a href="login.html">Login</a></p>
+
+</section>
+
+</main>
+
+</body>
+</html>

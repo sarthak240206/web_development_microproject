@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="authors.xsl"?>
+<!-- BookVerse authors data -->
+<authors>
+
+  <author id="a1">
+    <name>J.K. Rowling</name>
+    <country>United Kingdom</country>
+    <genre>Fantasy</genre>
+    <popular_book>Harry Potter and the Sorcerer's Stone</popular_book>
+  </author>
+
+  <author id="a2">
+    <name>Stephen King</name>
+    <country>United States</country>
+    <genre>Horror</genre>
+    <popular_book>The Shining</popular_book>
+  </author>
+
+  <author id="a3">
+    <name>R.K. Narayan</name>
+    <country>India</country>
+    <genre>Fiction</genre>
+    <popular_book>Malgudi Days</popular_book>
+  </author>
+
+  <author id="a4">
+    <name>Chetan Bhagat</name>
+    <country>India</country>
+    <genre>Contemporary Fiction</genre>
+    <popular_book>Five Point Someone</popular_book>
+  </author>
+
+  <author id="a5">
+    <name>Mark Twain</name>
+    <country>United States</country>
+    <genre>Adventure</genre>
+    <popular_book>Adventures of Huckleberry Finn</popular_book>
+  </author>
+
+  <author id="a6">
+    <name>Paulo Coelho</name>
+    <country>Brazil</country>
+    <genre>Inspirational Fiction</genre>
+    <popular_book>The Alchemist</popular_book>
+  </author>
+
+  <author id="a7">
+    <name>George Orwell</name>
+    <country>United Kingdom</country>
+    <genre>Dystopian Fiction</genre>
+    <popular_book>1984</popular_book>
+  </author>
+
+  <author id="a8">
+    <name>Agatha Christie</name>
+    <country>United Kingdom</country>
+    <genre>Mystery</genre>
+    <popular_book>Murder on the Orient Express</popular_book>
+  </author>
+
+  <author id="a9">
+    <name>Jane Austen</name>
+    <country>United Kingdom</country>
+    <genre>Romance</genre>
+    <popular_book>Pride and Prejudice</popular_book>
+  </author>
+
+  <author id="a10">
+    <name>Dan Brown</name>
+    <country>United States</country>
+    <genre>Thriller</genre>
+    <popular_book>The Da Vinci Code</popular_book>
+  </author>
+
+  <author id="a11">
+    <name>Arundhati Roy</name>
+    <country>India</country>
+    <genre>Literary Fiction</genre>
+    <popular_book>The God of Small Things</popular_book>
+  </author>
+
+  <author id="a12">
+    <name>Ruskin Bond</name>
+    <country>India</country>
+    <genre>Children's Fiction</genre>
+    <popular_book>The Blue Umbrella</popular_book>
+  </author>
+
+  <author id="a13">
+    <name>J.R.R. Tolkien</name>
+    <country>United Kingdom</country>
+    <genre>Fantasy</genre>
+    <popular_book>The Hobbit</popular_book>
+  </author>
+
+  <author id="a14">
+    <name>Ernest Hemingway</name>
+    <country>United States</country>
+    <genre>Classic Fiction</genre>
+    <popular_book>The Old Man and the Sea</popular_book>
+  </author>
+
+  <author id="a15">
+    <name>Leo Tolstoy</name>
+    <country>Russia</country>
+    <genre>Historical Fiction</genre>
+    <popular_book>War and Peace</popular_book>
+  </author>
+
+  <author id="a16">
+    <name>Fyodor Dostoevsky</name>
+    <country>Russia</country>
+    <genre>Psychological Fiction</genre>
+    <popular_book>Crime and Punishment</popular_book>
+  </author>
+
+  <author id="a17">
+    <name>Harper Lee</name>
+    <country>United States</country>
+    <genre>Drama</genre>
+    <popular_book>To Kill a Mockingbird</popular_book>
+  </author>
+
+  <author id="a18">
+    <name>Charles Dickens</name>
+    <country>United Kingdom</country>
+    <genre>Classic Fiction</genre>
+    <popular_book>Oliver Twist</popular_book>
+  </author>
+
+  <author id="a19">
+    <name>Victor Hugo</name>
+    <country>France</country>
+    <genre>Historical Fiction</genre>
+    <popular_book>Les Miserables</popular_book>
+  </author>
+
+  <author id="a20">
+    <name>Khaled Hosseini</name>
+    <country>Afghanistan</country>
+    <genre>Drama</genre>
+    <popular_book>The Kite Runner</popular_book>
+  </author>
+
+</authors>

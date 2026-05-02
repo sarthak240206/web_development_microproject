@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search Books | BookVerse</title>
+
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+
+<style>
+body{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+main{
+flex:1;
+}
+
+/* center search icon before results */
+.empty-search{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+color:#5f6888;
+}
+
+.empty-search .icon{
+font-size:72px;
+margin-bottom:12px;
+opacity:.9;
+}
+
+.empty-search h2{
+font-size:1.4rem;
+margin-bottom:6px;
+color:#1d2440;
+}
+
+.empty-search p{
+max-width:420px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar container">
+<a class="brand" href="home.html">📚 BookVerse</a>
+
+<button id="menuBtn" class="menu-btn">☰</button>
+
+<ul id="navLinks" class="nav-links">
+<li><a href="home.html">Dashboard</a></li>
+<li><a href="search.html">Search Books</a></li>
+<li><a href="authors.html">Authors</a></li>
+<li><a href="favorites.html">Favorites</a></li>
+<li><a href="profile.php">Profile</a></li>
+<li><a href="tips.html">Reading Tips</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>
+</nav>
+</header>
+
+<main class="container section">
+
+<h1>Search Book Database</h1>
+
+<p class="muted">
+Every result card includes language, edition count, and subject tags from API data.
+</p>
+
+<form id="searchForm" class="row" style="margin-top:10px;">
+<input id="searchInput" type="text"
+placeholder="Try: machine learning, psychology, clean code..." required />
+
+<button class="btn btn-primary" type="submit">Search Now</button>
+</form>
+
+<p id="searchMsg" class="muted" style="margin-top:10px;"></p>
+
+<!-- shown before search -->
+<div id="emptySearch" class="empty-search">
+<div class="icon">🔍</div>
+<h2>Search Your Favorite Books</h2>
+<p>Enter title, topic, or author name above to explore the BookVerse library.</p>
+</div>
+
+<section id="searchGrid" class="grid" style="margin-top:12px;"></section>
+
+</main>
+
+<footer class="footer">© 2026 BookVerse - Smart Book Library Dashboard</footer>
+
+<button id="topBtn" class="btn btn-primary">Top</button>
+<div id="toast" class="toast"></div>
+
+<script>
+/* hide icon section when search happens */
+document.getElementById("searchForm").addEventListener("submit",function(){
+document.getElementById("emptySearch").style.display="none";
+});
+</script>
+
+</body>
+</html>

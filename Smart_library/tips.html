@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reading Habits | BookVerse</title>
+
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+
+<style>
+.tips-wrap{
+display:grid;
+gap:18px;
+margin-top:14px;
+}
+
+.tip-card{
+background:#fff;
+border-radius:16px;
+padding:20px;
+box-shadow:0 12px 26px rgba(34,46,120,.10);
+border:1px solid #e8edff;
+transition:.25s;
+}
+
+.tip-card:hover{
+transform:translateY(-4px);
+}
+
+.tip-card h2{
+margin-bottom:12px;
+color:#4857e8;
+font-size:1.25rem;
+}
+
+.tip-card li{
+margin-left:18px;
+margin-bottom:8px;
+color:#5f6888;
+line-height:1.6;
+}
+
+.stats-mini{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:14px;
+margin-top:16px;
+}
+
+.stats-mini div{
+background:#fff;
+padding:18px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 12px 26px rgba(34,46,120,.10);
+border:1px solid #e8edff;
+}
+
+.stats-mini h3{
+color:#4857e8;
+font-size:1.7rem;
+margin-bottom:4px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar container">
+<a class="brand" href="home.html">📚 BookVerse</a>
+
+<button id="menuBtn" class="menu-btn">☰</button>
+
+<ul id="navLinks" class="nav-links">
+<li><a href="home.html">Dashboard</a></li>
+<li><a href="search.html">Search Books</a></li>
+<li><a href="authors.html">Authors</a></li>
+<li><a href="favorites.html">Favorites</a></li>
+<li><a href="profile.php">Profile</a></li>
+<li><a href="tips.html">Reading Tips</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="logout.php">Logout</a></li>
+</ul>
+</nav>
+</header>
+
+<main class="container section">
+
+<h1>Reading Habits Dashboard</h1>
+
+<div class="stats-mini">
+<div>
+<h3>20 Min</h3>
+<p>Daily Reading Goal</p>
+</div>
+
+<div>
+<h3>5+</h3>
+<p>Books Recommended</p>
+</div>
+
+<div>
+<h3>100%</h3>
+<p>Growth Mindset</p>
+</div>
+</div>
+
+<section class="tips-wrap">
+
+<div class="tip-card">
+<h2>📘 10 Daily Reading Habits</h2>
+<ol>
+<li>Set a fixed reading time each day.</li>
+<li>Start with 20-minute sessions.</li>
+<li>Keep your phone on silent mode.</li>
+<li>Read in a clean, quiet place.</li>
+<li>Track pages read in a notebook.</li>
+<li>Highlight key concepts.</li>
+<li>Write short chapter summaries.</li>
+<li>Ask questions while reading.</li>
+<li>Review your notes weekly.</li>
+<li>Stay consistent and patient.</li>
+</ol>
+</div>
+
+<div class="tip-card">
+<h2>📚 Best Books for Students</h2>
+<ul>
+<li>Atomic Habits</li>
+<li>Deep Work</li>
+<li>The Alchemist</li>
+<li>Wings of Fire</li>
+<li>Rich Dad Poor Dad</li>
+</ul>
+</div>
+
+<div class="tip-card">
+<h2>🌟 Benefits of Reading</h2>
+<ul>
+<li>Improves language and communication skills.</li>
+<li>Increases concentration and memory.</li>
+<li>Builds creativity and critical thinking.</li>
+<li>Reduces stress and improves mental wellness.</li>
+<li>Supports academic and career growth.</li>
+</ul>
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">© 2026 BookVerse - Smart Book Library Dashboard</footer>
+
+<button id="topBtn" class="btn btn-primary">Top</button>
+<div id="toast" class="toast"></div>
+
+</body>
+</html>

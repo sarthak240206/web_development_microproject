@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login | BookVerse</title>
+
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+
+<style>
+body.auth-body{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+overflow:hidden;
+position:relative;
+font-family:Segoe UI,Arial,sans-serif;
+}
+
+/* glowing background */
+body.auth-body::before,
+body.auth-body::after{
+content:"";
+position:absolute;
+border-radius:50%;
+filter:blur(65px);
+opacity:.38;
+z-index:0;
+animation:pulse 6s ease-in-out infinite;
+}
+
+body.auth-body::before{
+width:280px;
+height:280px;
+background:#60a5fa;
+top:8%;
+left:8%;
+}
+
+body.auth-body::after{
+width:340px;
+height:340px;
+background:#c084fc;
+bottom:10%;
+right:8%;
+animation-delay:2s;
+}
+
+/* center only */
+.auth-layout{
+position:relative;
+z-index:2;
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+padding:20px;
+}
+
+/* hide left side card */
+.auth-side{
+display:none;
+}
+
+/* login form without outer card */
+.auth-card{
+width:100%;
+max-width:430px;
+padding:10px;
+background:transparent;
+border:none;
+box-shadow:none;
+color:#fff;
+}
+
+.auth-card h1{
+font-size:42px;
+text-align:center;
+margin-bottom:8px;
+}
+
+.auth-card p{
+text-align:center;
+color:#dbeafe;
+margin-bottom:22px;
+}
+
+.auth-form{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+.auth-form label{
+font-size:14px;
+font-weight:600;
+}
+
+.auth-form input{
+padding:14px;
+border:none;
+outline:none;
+border-radius:12px;
+background:rgba(255,255,255,.95);
+font-size:15px;
+}
+
+.auth-form input:focus{
+box-shadow:0 0 0 3px rgba(255,255,255,.15);
+}
+
+.auth-help{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:4px;
+font-size:14px;
+}
+
+.auth-help label{
+display:flex;
+align-items:center;
+gap:7px;
+font-weight:500;
+}
+
+.auth-help input[type="checkbox"]{
+width:16px;
+height:16px;
+accent-color:#7c3aed;
+}
+
+.auth-help a{
+color:#fff;
+text-decoration:none;
+}
+
+.auth-help a:hover{
+text-decoration:underline;
+}
+
+.btn{
+padding:14px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:700;
+font-size:16px;
+margin-top:6px;
+background:linear-gradient(90deg,#60a5fa,#c084fc);
+color:#fff;
+box-shadow:0 10px 25px rgba(0,0,0,.20);
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.error{
+text-align:center;
+color:#ffd6d6;
+margin-top:4px;
+}
+
+.auth-card > p:last-child{
+margin-top:18px;
+text-align:center;
+font-size:15px;
+}
+
+.auth-card > p:last-child a{
+color:#fff;
+font-weight:700;
+text-decoration:none;
+}
+
+.auth-card > p:last-child a:hover{
+text-decoration:underline;
+}
+
+@keyframes pulse{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.08);}
+}
+
+@media(max-width:520px){
+.auth-card{
+max-width:100%;
+padding:6px;
+}
+.auth-card h1{
+font-size:34px;
+}
+.auth-help{
+flex-direction:column;
+gap:10px;
+align-items:flex-start;
+}
+}
+</style>
+
+</head>
+
+<body class="auth-body">
+<main class="auth-layout">
+
+<section class="auth-side">
+</section>
+
+<section class="auth-card">
+<h1>Login</h1>
+<p>Continue to your dashboard</p>
+
+<form id="loginForm" class="auth-form" method="POST" action="login_process.php">
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+<label for="password">Password</label>
+<input id="password" name="password" type="password" placeholder="Minimum 6 characters" required />
+
+<div class="auth-help">
+<label><input type="checkbox" /> Remember me</label>
+<a href="#">Forgot password?</a>
+</div>
+
+<button class="btn btn-primary" type="submit">Login</button>
+
+<p id="loginError" class="error"></p>
+
+</form>
+
+<p>New user? <a href="signup.html">Create account</a></p>
+</section>
+
+</main>
+</body>
+</html>

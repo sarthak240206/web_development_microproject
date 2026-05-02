@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authors | BookVerse</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <a class="brand" href="home.html">📚 BookVerse</a>
+      <button id="menuBtn" class="menu-btn">☰</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="search.html">Search Books</a></li>
+        <li><a href="authors.html">Authors</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="profile.php">Profile</a></li>
+        <li><a href="tips.html">Reading Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="logout.php">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h1>Famous Authors</h1>
+    
+    <div class="table-box">
+      <div id="authorsRenderMsg" class="muted">Loading authors table...</div>
+      <div id="authorsTableMount"></div>
+    </div>
+  </main>
+
+  <footer class="footer">© 2026 BookVerse - Smart Book Library</footer>
+  <button id="topBtn" class="btn btn-primary">Top</button>
+  <div id="toast" class="toast"></div>
+</body>
+</html>
